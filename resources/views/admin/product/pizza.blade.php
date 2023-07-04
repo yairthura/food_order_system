@@ -16,12 +16,9 @@
                         <div class="table-data__tool-right">
                             <a href="{{ route('product#createPage') }}">
                                 <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                    <i class="zmdi zmdi-plus"></i>Add Pizza
+                                    <i class="zmdi zmdi-plus"></i>Add Product
                                 </button>
                             </a>
-                            <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                CSV download
-                            </button>
                         </div>
                     </div>
                     {{-- @if (session('categorySuccess'))
@@ -42,11 +39,11 @@
                         </div>
                     @endif
                     <div class="row">
-                        <div class="col-3">
+                        {{-- <div class="col-3">
                             <h3 class="text-secondary">Search Key : <span class="text-danger">{{ request('key') }} </span>
                             </h3>
-                        </div>
-                        <div class="col-3 offset-6">
+                        </div> --}}
+                        <div class="col-3 offset-9">
                             <form action="{{ route('product#list') }}">
                                 @csrf <div class="d-flex">
                                     <input type="text" name="key" class="form-control" placeholder="Search"
@@ -58,11 +55,11 @@
                             </form>
                         </div>
                     </div>
-                    <div class="row mt-2">
+                    {{-- <div class="row mt-2">
                         <div class="col-2 offset-10 bg-white shadow-sn py-2 px-2 text-center">
                             <h3><i class="fa-solid fa-database"></i>- ({{ $pizzas->total() }})</h3>
                         </div>
-                    </div>
+                    </div> --}}
                     @if (count($pizzas) != 0)
                         <div class="table-responsive table-responsive-data2">
                             <table class="table table-data2 text-center">
@@ -78,6 +75,7 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($pizzas as $p)
+                                        <img src="" class="img-thumbnail shadow-sm" alt="">
                                         <tr class="tr-shadow">
                                             <td class="col-2"><img src="{{ asset('storage/' . $p->image) }}"
                                                     class="img-thumbnail shadow-sm" alt=""></td>
@@ -114,7 +112,7 @@
                             </div>
                         </div>
                     @else
-                        <h3 class="text-secondary text-center mt-5">There is no Pizza here</h3>
+                        <h3 class="text-secondary text-center mt-5">There is no Product here</h3>
                     @endif
                     <!-- END DATA TABLE -->
                 </div>

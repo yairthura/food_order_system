@@ -24,7 +24,7 @@
                                     <input id="cc-pament" name="categoryName" type="text"
                                         value="{{ old('categoryName') }}"
                                         class="form-control @error('categoryName') is-invalid @enderror"
-                                        aria-required="true" aria-invalid="false" placeholder="Seafood...">
+                                        aria-required="true" aria-invalid="false" placeholder="Category Name">
                                     @error('categoryName')
                                         <div class="invalid-feedback">
                                             {{ $message }}

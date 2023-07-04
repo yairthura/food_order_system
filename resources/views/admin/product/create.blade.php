@@ -14,7 +14,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="card-title">
-                                <h3 class="text-center title-2">Create Your Pizza </h3>
+                                <h3 class="text-center title-2">Create Your Product </h3>
                             </div>
                             <hr>
                             <form action="{{ route('product#create') }}" method="post" novalidate="novalidate"
@@ -24,7 +24,7 @@
                                     <label class="control-label mb-1">Name</label>
                                     <input id="cc-pament" name="pizzaName" type="text" value="{{ old('pizzaName') }}"
                                         class="form-control @error('pizzaName') is-invalid @enderror " aria-required="true"
-                                        aria-invalid="false" placeholder="Enter your Pizza name">
+                                        aria-invalid="false" placeholder="Enter your Product name">
                                     @error('pizzaName')
                                         <div class="invalid-feedback">
                                             {{ $message }}

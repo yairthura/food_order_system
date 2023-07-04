@@ -19,9 +19,7 @@
                                     <i class="zmdi zmdi-plus"></i>Add catrgory
                                 </button>
                             </a>
-                            <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                CSV download
-                            </button>
+
                         </div>
                     </div>
                     {{-- @if (session('categorySuccess'))
@@ -42,11 +40,11 @@
                         </div>
                     @endif
                     <div class="row">
-                        <div class="col-3">
+                        {{-- <div class="col-3">
                             <h3 class="text-secondary">Search Key : <span class="text-danger">{{ request('key') }} </span>
                             </h3>
-                        </div>
-                        <div class="col-3 offset-6">
+                        </div> --}}
+                        <div class="col-3 offset-9">
                             <form action="{{ route('category#list') }}">
                                 @csrf <div class="d-flex">
                                     <input type="text" name="key" class="form-control" placeholder="Search"
@@ -58,11 +56,11 @@
                             </form>
                         </div>
                     </div>
-                    <div class="row mt-2">
+                    {{-- <div class="row mt-2">
                         <div class="col-2 offset-10 bg-white shadow-sn py-2 px-2 text-center">
                             <h3><i class="fa-solid fa-database"></i> - ({{ $categories->total() }})</h3>
                         </div>
-                    </div>
+                    </div> --}}
                     @if (count($categories) != 0)
                         <div class="table-responsive table-responsive-data2">
                             <table class="table table-data2 text-center">

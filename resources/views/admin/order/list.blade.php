@@ -17,11 +17,7 @@
                     <form action="{{ route('admin#changeStatus') }}" method="get">
                         @csrf
                         <div class="input-group mb-3 ">
-                            <div class="input-group-append me-2 mt-1">
-                                <span class="input-group-append">
-                                    <i class="fa-solid fa-database mr-2"></i>({{ count($order) }})
-                                </span>
-                            </div>
+
                             <div class="col-3">
                                 <select name="orderStatus" class="form-control col-3" id="orderStatus">
                                     <option value="">All
@@ -38,6 +34,7 @@
                             <div class="input-group-append">
                                 <button type="submit" class="btn btn-sm bg-dark text-white ms-3">Search</button>
                             </div>
+
                         </div>
                     </form>
 

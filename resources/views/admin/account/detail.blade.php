@@ -20,6 +20,12 @@
                 <div class="col-lg-10 offset-1">
                     <div class="card">
                         <div class="card-body">
+                            <div class="class">
+                                <a href="{{ route('admin#list') }}">
+                                    <i class="fa-solid fa-arrow-left text-dark "></i>
+                                </a>
+                                {{-- <i class="fa-solid fa-arrow-left text-dark " onclick="history.back()"></i> --}}
+                            </div>
                             <div class="card-title">
                                 <h3 class="text-center title-2">Account Info </h3>
                             </div>
