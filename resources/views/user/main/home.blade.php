@@ -17,13 +17,13 @@
                         </div>
                         <hr>
                         <div class="  d-flex align-items-center justify-content-between mb-3 pt-1">
-                            <a href="{{ route('user#home') }}" class="text-dark">
+                            <a href="{{ route('user#home') }}" class="text-info">
                                 <label class="" for="price-all">All</label>
                             </a>
                         </div>
                         @foreach ($category as $c)
                             <div class="  d-flex align-items-center justify-content-between mb-3 pt-1">
-                                <a href="{{ route('user#filter', $c->id) }}" class="text-dark">
+                                <a href="{{ route('user#filter', $c->id) }}" class="text-success ">
                                     <label class="" for="price-all">{{ $c->name }}</label>
                                 </a>
                             </div>

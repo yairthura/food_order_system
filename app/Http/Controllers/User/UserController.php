@@ -64,6 +64,7 @@ return back()->with(['changePassword'=> 'Password Change Success....']);
 
    public function  accountChange($id,Request $request){
 
+
     $this->accoutValidationCheck($request);
         $data = $this->getUserDate($request);
 
@@ -82,7 +83,7 @@ return back()->with(['changePassword'=> 'Password Change Success....']);
         }
 
         User::where('id', $id)->update($data);
-        return back()->with(['updateSuccess'=> 'User Account Change Success....']);
+        return redirect(route('user#home'))->with(['updateSuccess'=> 'User Account Change Success....']);
     }
 
     // filter pizza

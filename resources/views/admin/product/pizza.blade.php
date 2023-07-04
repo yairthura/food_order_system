@@ -75,7 +75,6 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($pizzas as $p)
-                                        <img src="" class="img-thumbnail shadow-sm" alt="">
                                         <tr class="tr-shadow">
                                             <td class="col-2"><img src="{{ asset('storage/' . $p->image) }}"
                                                     class="img-thumbnail shadow-sm" alt=""></td>

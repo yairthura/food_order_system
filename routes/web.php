@@ -88,6 +88,7 @@ Route::middleware(['auth'])->group(function () {
             Route::get('changePage', [UserController::class, 'changePasswordPage'])->name('user#change');
             Route::post('change', [UserController::class, 'changePassword'])->name('user#changePassword');
         });
+
         Route::prefix('account')->group(function () {
             Route::get('change', [UserController::class, 'accountChangePage'])->name('user#accountChangePage');
             Route::post('update/{id}', [UserController::class, 'accountChange'])->name('user#accountChange');

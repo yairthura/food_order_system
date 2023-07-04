@@ -10,7 +10,7 @@
                     <div class="table-data__tool">
                         <div class="table-data__tool-left">
                             <div class="overview-wrap">
-                                <h2 class="title-1">Product List</h2>
+                                <h2 class="title-1">Admin List</h2>
                             </div>
                         </div>
                     </div>
@@ -41,11 +41,11 @@
                             </form>
                         </div>
                     </div>
-                    <div class="row mt-2">
+                    {{-- <div class="row mt-2">
                         <div class="col-2 offset-10 bg-white shadow-sn py-2 px-2 text-center">
                             <h3><i class="fa-solid fa-database"></i>- ({{ $admin->total() }})</h3>
                         </div>
-                    </div>
+                    </div> --}}
                     {{-- @if (count($pizzas) != 0) --}}
                     <div class="table-responsive table-responsive-data2">
                         <table class="table table-data2 text-center">

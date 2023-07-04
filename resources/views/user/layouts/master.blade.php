@@ -34,7 +34,7 @@
     <!-- Navbar Start -->
     <div class="container-fluid bg-dark mb-30">
         <div class="row px-xl-5">
-            <div class="col-lg-3 d-none d-lg-block">
+            <div class="col-lg-3 d-none d-lg-block mt-3">
                 <a href="" class="text-decoration-none">
                     <span class="h3 mt-5 text-uppercase text-primary bg-dark px-2">MY SHOP</span>
                 </a>
@@ -55,11 +55,29 @@
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                       --}}
                         </div>
+                        @if (session('updateSuccess'))
+                            <div class="mt-3">
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <i class="fa-solid fa-circle-xmark"></i> {{ session('updateSuccess') }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+                            </div>
+                        @endif
+
+                        <div class="image  offset-9 mr-1">
+                            @if (Auth::user()->image == null)
+                            @else
+                                <img src="{{ asset('storage/' . Auth::user()->image) }}" width="55" height="55"
+                                    class="rounded-circle" />
+                            @endif
+                        </div>
                         <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
                             <div class="dropdown d-inline me-5">
-                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fa-solid fa-user"></i> {{ Auth::user()->name }}
+                                <a class=" dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    {{ Auth::user()->name }}
+
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item my-3" href="{{ route('user#accountChangePage') }}"><i
@@ -78,6 +96,7 @@
                                 </ul>
                             </div>
                         </div>
+
                     </div>
                 </nav>
             </div>
@@ -101,12 +120,14 @@
                     <div class="col-md-4 mb-5">
                         <h5 class="text-secondary text-uppercase mb-4">Quick Shop</h5>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-secondary mb-2" href="#"><i
+                                    class="fa fa-angle-right mr-2"></i>Home</a>
                             <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our
                                 Shop</a>
                             <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shop
                                 Detail</a>
-                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shopping
+                            <a class="text-secondary mb-2" href="#"><i
+                                    class="fa fa-angle-right mr-2"></i>Shopping
                                 Cart</a>
                             <a class="text-secondary mb-2" href="#"><i
                                     class="fa fa-angle-right mr-2"></i>Checkout</a>
